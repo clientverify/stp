@@ -37,11 +37,11 @@ namespace stp
 enum inputStatus input_status = NOT_DECLARED;
 
 // Originally just used by the parser, now used elesewhere.
-STP* GlobalSTP;
-STPMgr* GlobalParserBM;
+__thread STP* GlobalSTP;
+__thread STPMgr* GlobalParserBM;
 
 // Used exclusively for parsing.
-Cpp_interface* GlobalParserInterface;
+__thread Cpp_interface* GlobalParserInterface;
 
 // FIXME: This isn't in Globals.h so how can anyone use this?
 void (*vc_error_hdlr)(const char* err_msg) = 0;

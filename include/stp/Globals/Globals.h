@@ -86,9 +86,9 @@ extern enum inputStatus input_status;
 
 
 // Useful global variables. Use for parsing only
-extern STP* GlobalSTP;
-extern STPMgr* GlobalParserBM;
-extern Cpp_interface* GlobalParserInterface;
+extern __thread STP* GlobalSTP;
+extern __thread STPMgr* GlobalParserBM;
+extern __thread Cpp_interface* GlobalParserInterface;
 
 // Function that computes various kinds of statistics for the phases
 // of STP

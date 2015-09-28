@@ -56,7 +56,7 @@ typedef stp::BVSolver* bvsolverstar;
 typedef stp::AbsRefine_CounterExample* ctrexamplestar;
 typedef stp::ASTVec nodelist;
 typedef stp::CompleteCounterExample* CompleteCEStar;
-stp::ASTVec* decls = NULL;
+__thread stp::ASTVec* decls = NULL;
 SimplifyingNodeFactory* simpNF = NULL;
 // vector<stp::ASTNode *> created_exprs;
 
